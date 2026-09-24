@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
     <title>О компании — Рыжий кот</title>
@@ -174,44 +176,45 @@
     <!-- ============ FOOTER ============ -->
     <footer class="footer">
       <div class="footer__inner">
-        <div class="footer__col">
-          <ul class="footer__list">
-            <li><a href="#">Новинки 77</a></li>
-            <li><a href="#">Каталог</a></li>
-            <li><a href="#">Хиты</a></li>
-          </ul>
-        </div>
+        <!-- 1. Ссылки -->
+        <ul class="footer__list footer__list--1">
+          <li><a href="#">Новинки 77</a></li>
+          <li><a href="#">Каталог</a></li>
+          <li><a href="#">Хиты</a></li>
+        </ul>
 
-        <div class="footer__col">
-          <ul class="footer__list">
-            <li><a href="#">Акции</a></li>
-            <li><a href="#">Новости</a></li>
-            <li><a href="#">Вопрос-ответ</a></li>
-          </ul>
-        </div>
+        <ul class="footer__list footer__list--2">
+          <li><a href="#">Акции</a></li>
+          <li><a href="#">Новости</a></li>
+          <li><a href="#">Вопрос-ответ</a></li>
+        </ul>
 
-        <div class="footer__col">
-          <ul class="footer__list">
-            <li><a href="#">Сотрудничество</a></li>
-            <li><a href="#">Контакты</a></li>
-            <li><a href="#">Документы</a></li>
-          </ul>
-        </div>
+        <ul class="footer__list footer__list--3">
+          <li><a href="#">Сотрудничество</a></li>
+          <li><a href="#">Контакты</a></li>
+          <li><a href="#">Документы</a></li>
+        </ul>
 
-        <div class="footer__col footer__col--contacts">
+        <!-- 2. Телефон -->
+        <div class="footer__phone-block">
           <p class="footer__phone-label">Звоните:</p>
           <a class="footer__phone" href="tel:+78632040125">8 (863) 204-01-25</a>
-          <p class="footer__address">
-            Россия<br />
-            Ростовская область<br />
-            г. Аксай, ул. Шолохова 1Б
-          </p>
         </div>
-      </div>
 
-      <div class="footer__bottom">
-        <p class="footer__agree">Соглашение на обработку персональных данных</p>
-        <p class="footer__copy">2025 ООО "Рыжий кот"</p>
+        <!-- 3. Адрес -->
+        <address class="footer__address">
+          Россия<br />
+          Ростовская область<br />
+          г. Аксай, ул. Шолохова 1Б
+        </address>
+
+        <!-- 4. Соглашение -->
+        <div class="footer__legal">
+          <p class="footer__agree">
+            Соглашение на обработку персональных данных
+          </p>
+          <p class="footer__copy">2025 ООО "Рыжий кот"</p>
+        </div>
       </div>
     </footer>
 
