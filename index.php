@@ -32,7 +32,7 @@ if (!is_array($data)) {
 }
 
 // Очищаем данные
-$name  = trim($data['name']  ?? '');
+$name = trim($data['name'] ?? '');
 $email = trim($data['email'] ?? '');
 
 $errors = [];
@@ -61,9 +61,6 @@ if (!empty($errors)) {
     exit;
 }
 
-// ---- Всё корректно ----
-// В реальном проекте здесь была бы отправка письма (mail() или PHPMailer).
-// Для тестового задания просто возвращаем успех.
 
 echo json_encode([
     'success' => true,
