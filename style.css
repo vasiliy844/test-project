@@ -2,717 +2,713 @@
    Общие настройки
    ========================= */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :root {
-    --color-primary: #034ea2;        /* синий из макета */
-    --color-accent: #f37021;         /* оранжевый */
-    --color-text: #000000;           /* основной чёрный текст */
-    --color-heading: #141414;        /* цвет заголовка «О компании» */
-    --color-muted: #676767;          /* хлебные крошки, второстепенный текст */
-    --color-placeholder: #aaaaaa;    /* placeholder в поиске и форме */
-    --color-border: #cccccc;
-    --color-error: #d62828;
-    --color-success: #2a9d8f;
+  --color-primary: #034ea2;
+  --color-accent: #f37021;
+  --color-text: #000000;
+  --color-heading: #141414;
+  --color-muted: #676767;
+  --color-placeholder: #aaaaaa;
+  --color-border: #cccccc;
+  --color-error: #d62828;
+  --color-success: #2a9d8f;
 
-    --bg-header: #e9ecef;            /* фон header */
-    --bg-footer: #e9ecef;            /* фон footer и popup */
-    --bg-page: #f4f6f9;              /* фон основной части */
+  --bg-header: #e9ecef;
+  --bg-footer: #e9ecef;
+  --bg-page: #f4f6f9;
 
-    /* Отступы по бокам — общие для header/main/footer */
-    --side-padding: 20px;
+  --side-padding: 20px;
 }
 
 html,
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: 'Manrope', Arial, sans-serif;
-    color: var(--color-text);
-    background: var(--bg-page);
-    line-height: 1.55;
-    font-size: 16px;
+  font-family: "Manrope", Arial, sans-serif;
+  color: var(--color-text);
+  background: var(--bg-page);
+  line-height: 1.55;
+  font-size: 16px;
 }
 
 img {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
+  display: block;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
-/* =========================
-   HEADER
-   ========================= */
+/*Header*/
+
 .header {
-    padding: 10px var(--side-padding) 14px;
-    background: var(--bg-header);
-    height: 140px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  padding: 10px var(--side-padding) 14px;
+  background: var(--bg-header);
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .header__top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
 }
 
 .header__menu,
 .header__login {
-    width: 50px;
-    height: 50px;
-    padding: 0;
-    border: none;
-    background: transparent;
-    cursor: pointer;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
 }
 
 .header__menu img,
 .header__login img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .header__logo {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .header__logo img {
-    display: block;
-    width: 62px;
-    height: auto;
+  display: block;
+  width: 62px;
+  height: auto;
 }
 
-/* -------- Поиск -------- */
+/*Search*/
 .search {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin: 0 auto;
-    height: 40px;
-    background: #fff;
-    border-radius: 6px;
-    overflow: hidden;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  height: 40px;
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 .search__button {
-    width: 60px;
-    height: 100%;
-    padding: 8px;
-    border: none;
-    background: #fff;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 60px;
+  height: 100%;
+  padding: 8px;
+  border: none;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .search__button img {
-    width: 22px;
-    height: 22px;
-    object-fit: contain;
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
 }
 
 .search__input {
-    flex: 1;
-    height: 100%;
-    padding: 0 18px 0 0;
-    border: none;
-    outline: none;
-    font-family: inherit;
-    font-size: 18px;
-    color: var(--color-text);
-    background: transparent;
+  flex: 1;
+  height: 100%;
+  padding: 0 18px 0 0;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 18px;
+  color: var(--color-text);
+  background: transparent;
 }
 
 .search__input::placeholder {
-    color: var(--color-placeholder);
+  color: var(--color-placeholder);
 }
 
-/* =========================
-   MAIN
-   ========================= */
+/*Main*/
+
 .main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 30px var(--side-padding) 60px;
-    background: var(--bg-page);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px var(--side-padding) 60px;
+  background: var(--bg-page);
 }
 
 /* Хлебные крошки */
 .breadcrumbs {
-    font-size: 14px;
-    color: var(--color-muted);
-    margin-bottom: 18px;
+  font-size: 14px;
+  color: var(--color-muted);
+  margin-bottom: 18px;
 }
 
 .breadcrumbs__link {
-    color: var(--color-muted);
+  color: var(--color-muted);
 }
 
 .breadcrumbs__link:hover {
-    color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 .breadcrumbs__sep {
-    margin: 0 6px;
+  margin: 0 6px;
 }
 
 /* Заголовки */
 .page-title {
-    font-size: 34px;
-    font-weight: 500;
-    color: var(--color-heading);
-    margin: 0 0 10px;
+  font-size: 34px;
+  font-weight: 500;
+  color: var(--color-heading);
+  margin: 0 0 10px;
 }
 
 .page-subtitle {
-    font-size: 18px;
-    color: var(--color-primary);
-    margin: 0 0 30px;
-    font-weight: 400;
+  font-size: 18px;
+  color: var(--color-primary);
+  margin: 0 0 30px;
+  font-weight: 400;
 }
 
 .section-title {
-    font-size: 22px;
-    font-weight: 500;
-    color: var(--color-primary);
-    margin: 40px 0 18px;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--color-primary);
+  margin: 40px 0 18px;
 }
 
 .text {
-    font-size: 16px;
-    color: var(--color-text);
-    margin: 0 0 18px;
+  font-size: 16px;
+  color: var(--color-text);
+  margin: 0 0 18px;
 }
 
-/* =========================
-   КОМПАНИЯ В ЦИФРАХ
-   ========================= */
+/*Цифры*/
+
 .numbers {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    margin: 10px 0 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin: 10px 0 30px;
 }
 
 .numbers__value {
-    font-size: 22px;
-    font-weight: 500;
-    color: var(--color-accent);
-    margin: 0 0 4px;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--color-accent);
+  margin: 0 0 4px;
 }
 
 .numbers__desc {
-    font-size: 15px;
-    color: var(--color-text);
-    margin: 0;
+  font-size: 15px;
+  color: var(--color-text);
+  margin: 0;
 }
 
 /* Фото */
 .company-photo {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-    margin: 20px 0 30px;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 20px 0 30px;
 }
 
-/* =========================
-   СПИСКИ
-   ========================= */
+/*Списки*/
+
 .list {
-    margin: 0 0 20px;
-    padding-left: 22px;
+  margin: 0 0 20px;
+  padding-left: 22px;
 }
 
 .list li {
-    margin-bottom: 8px;
-    color: var(--color-text);
+  margin-bottom: 8px;
+  color: var(--color-text);
 }
 
 .list--blue li::marker {
-    color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 .list--orange li::marker {
-    color: var(--color-accent);
+  color: var(--color-accent);
 }
 
 .list--orange span {
-    color: var(--color-accent);
-    font-weight: 500;
+  color: var(--color-accent);
+  font-weight: 500;
 }
 
-/* =========================
-   КНОПКА ФОРМЫ
-   ========================= */
+/*Кнопка формы*/
+
 .btn {
-    display: inline-block;
-    font-family: inherit;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 16px 32px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.2s ease;
-    text-align: center;
+  display: inline-block;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  text-align: center;
 }
 
 .btn--primary {
-    background: var(--color-primary);
-    color: #fff;
+  background: var(--color-primary);
+  color: #fff;
 }
 
 .btn--primary:hover {
-    background: #023a7a;
+  background: #023a7a;
 }
 
 .btn--full {
-    width: 100%;
+  width: 100%;
 }
 
 .btn--feedback {
-    margin-top: 30px;
-    text-transform: uppercase;
-    letter-spacing: 0.4px;
+  margin-top: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
 }
 
-/* =========================
-   FOOTER
-   ========================= */
+/*Footer*/
 
-/* Раскладка для 960px (базовая):
-   слева list1, справа 3 блока: list2, list3, phone.
-   Внизу: слева legal, справа address. */
 .footer {
-    background: var(--bg-footer);
-    padding: 40px var(--side-padding) 30px;
-    margin-top: 40px;
-    min-height: 326px;
-    display: flex;
-    flex-direction: column;
+  background: var(--bg-footer);
+  padding: 40px var(--side-padding) 30px;
+  margin-top: 40px;
+  min-height: 326px;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer__inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-        "list1 list2 list3 phone"
-        "legal legal legal address";
-    gap: 30px 40px;
-    flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "list1 list2 list3 phone"
+    "legal legal legal address";
+  gap: 30px 40px;
+  flex: 1;
 }
 
-.footer__list--1     { grid-area: list1; }
-.footer__list--2     { grid-area: list2; }
-.footer__list--3     { grid-area: list3; }
-.footer__phone-block { grid-area: phone; }
-.footer__address     { grid-area: address; }
-.footer__legal       { grid-area: legal; }
+.footer__list--1 {
+  grid-area: list1;
+}
+.footer__list--2 {
+  grid-area: list2;
+}
+.footer__list--3 {
+  grid-area: list3;
+}
+.footer__phone-block {
+  grid-area: phone;
+}
+.footer__address {
+  grid-area: address;
+}
+.footer__legal {
+  grid-area: legal;
+}
 
 .footer__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .footer__list li {
-    margin-bottom: 14px;
+  margin-bottom: 14px;
 }
 
 .footer__list a {
-    font-size: 16px;
-    color: var(--color-text);
-    transition: color 0.2s ease;
+  font-size: 16px;
+  color: var(--color-text);
+  transition: color 0.2s ease;
 }
 
 .footer__list a:hover {
-    color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 .footer__phone-label {
-    margin: 0 0 4px;
-    font-size: 15px;
-    color: var(--color-text);
+  margin: 0 0 4px;
+  font-size: 15px;
+  color: var(--color-text);
 }
 
 .footer__phone {
-    display: inline-block;
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--color-text);
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text);
 }
 
 .footer__address {
-    margin: 0;
-    font-style: normal;
-    font-size: 15px;
-    line-height: 1.6;
-    color: var(--color-text);
+  margin: 0;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-text);
 }
 
 .footer__agree,
 .footer__copy {
-    margin: 0 0 6px;
-    font-size: 15px;
-    color: var(--color-text);
+  margin: 0 0 6px;
+  font-size: 15px;
+  color: var(--color-text);
 }
 
-/* =========================
-   MODAL (POPUP)
-   ========================= */
+/*Modal popup*/
+
 .modal {
-    position: fixed;
-    inset: 0;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
 }
 
 .modal.is-open {
-    display: flex;
+  display: flex;
 }
 
 .modal__overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .modal__content {
-    position: relative;
-    background: var(--bg-footer);    /* #e9ecef — как в макете */
-    width: 100%;
-    max-width: 560px;
-    margin: 20px;
-    padding: 40px 36px 30px;
-    border-radius: 6px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+  position: relative;
+  background: var(--bg-footer);
+  width: 100%;
+  max-width: 560px;
+  margin: 20px;
+  padding: 40px 36px 30px;
+  border-radius: 6px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .modal__close {
-    position: absolute;
-    top: 14px;
-    right: 14px;
-    width: 32px;
-    height: 32px;
-    padding: 0;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal__close img {
-    width: 22px;
-    height: 22px;
+  width: 22px;
+  height: 22px;
 }
 
 .modal__title {
-    margin: 0 0 30px;
-    font-size: 26px;
-    font-weight: 500;
-    color: var(--color-primary);
+  margin: 0 0 30px;
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--color-primary);
 }
 
-/* =========================
-   ФОРМА
-   ========================= */
+/*Форма*/
+
 .form__group {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .form__input {
-    width: 100%;
-    padding: 16px 18px;
-    font-family: inherit;
-    font-size: 16px;
-    color: var(--color-text);
-    border: 1px solid var(--color-primary);
-    border-radius: 4px;
-    outline: none;
-    transition:
-        border-color 0.2s ease,
-        box-shadow 0.2s ease;
-    background: #fff;
+  width: 100%;
+  padding: 16px 18px;
+  font-family: inherit;
+  font-size: 16px;
+  color: var(--color-text);
+  border: 1px solid var(--color-primary);
+  border-radius: 4px;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  background: #fff;
 }
 
 .form__input::placeholder {
-    color: var(--color-placeholder);
+  color: var(--color-placeholder);
 }
 
 .form__input:focus {
-    box-shadow: 0 0 0 3px rgba(3, 78, 162, 0.15);
+  box-shadow: 0 0 0 3px rgba(3, 78, 162, 0.15);
 }
 
 .form__input.is-invalid {
-    border-color: var(--color-error);
+  border-color: var(--color-error);
 }
 
 .form__error {
-    display: block;
-    min-height: 16px;
-    margin-top: 6px;
-    font-size: 13px;
-    color: var(--color-error);
+  display: block;
+  min-height: 16px;
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--color-error);
 }
 
 .form__agree {
-    margin: 18px 0 0;
-    font-size: 14px;
-    color: var(--color-muted);
-    line-height: 1.5;
+  margin: 18px 0 0;
+  font-size: 14px;
+  color: var(--color-muted);
+  line-height: 1.5;
 }
 
 .form__status {
-    margin: 14px 0 0;
-    font-size: 14px;
-    text-align: center;
-    min-height: 20px;
+  margin: 14px 0 0;
+  font-size: 14px;
+  text-align: center;
+  min-height: 20px;
 }
 
 .form__status.is-success {
-    color: var(--color-success);
+  color: var(--color-success);
 }
 
 .form__status.is-error {
-    color: var(--color-error);
+  color: var(--color-error);
 }
 
-/* =========================
-   АДАПТИВ — 900px
-   ========================= */
+/*Адаптив 960px*/
+
 @media (max-width: 900px) {
-    .numbers {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .numbers {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    /* Футер пока держим в 4 колонки — раскладка 960 остаётся */
+  /* Футер пока держим в 4 колонки — раскладка 960 остаётся */
 }
 
-/* =========================
-   АДАПТИВ — 640px
-   ========================= */
+/*Адаптив 640px*/
+
 @media (max-width: 640px) {
-    .header {
-        padding: 8px var(--side-padding) 12px;
-        height: 140px;
-    }
+  .header {
+    padding: 8px var(--side-padding) 12px;
+    height: 140px;
+  }
 
-    .header__menu,
-    .header__login {
-        width: 42px;
-        height: 42px;
-    }
+  .header__menu,
+  .header__login {
+    width: 42px;
+    height: 42px;
+  }
 
-    .header__logo img {
-        width: 52px;
-    }
+  .header__logo img {
+    width: 52px;
+  }
 
-    .search {
-        max-width: 600px;
-        height: 40px;
-        border-radius: 4px;
-    }
+  .search {
+    max-width: 600px;
+    height: 40px;
+    border-radius: 4px;
+  }
 
-    .search__button {
-        width: 48px;
-        padding: 8px;
-    }
+  .search__button {
+    width: 48px;
+    padding: 8px;
+  }
 
-    .search__button img {
-        width: 20px;
-        height: 20px;
-    }
+  .search__button img {
+    width: 20px;
+    height: 20px;
+  }
 
-    .search__input {
-        font-size: 16px;
-        padding: 0 14px 0 0;
-    }
+  .search__input {
+    font-size: 16px;
+    padding: 0 14px 0 0;
+  }
 
-    .main {
-        padding: 20px var(--side-padding) 40px;
-    }
+  .main {
+    padding: 20px var(--side-padding) 40px;
+  }
 
-    .page-title {
-        font-size: 26px;
-    }
+  .page-title {
+    font-size: 26px;
+  }
 
-    .page-subtitle {
-        font-size: 16px;
-    }
+  .page-subtitle {
+    font-size: 16px;
+  }
 
-    .section-title {
-        font-size: 19px;
-        margin-top: 30px;
-    }
+  .section-title {
+    font-size: 19px;
+    margin-top: 30px;
+  }
 
-    .numbers {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 14px;
-    }
+  .numbers {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
 
-    .numbers__value {
-        font-size: 18px;
-    }
+  .numbers__value {
+    font-size: 18px;
+  }
 
-    .numbers__desc {
-        font-size: 14px;
-    }
+  .numbers__desc {
+    font-size: 14px;
+  }
 
-    .btn--feedback {
-        width: 100%;
-        padding: 14px 20px;
-        font-size: 14px;
-    }
+  .btn--feedback {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 14px;
+  }
 
-    .footer {
-        padding: 30px var(--side-padding) 24px;
-        min-height: 433px;
-    }
+  .footer {
+    padding: 30px var(--side-padding) 24px;
+    min-height: 433px;
+  }
 
-    /* Раскладка для 640px:
+  /* Раскладка для 640px:
        слева list1, по центру list3, справа list2.
        Ниже: legal + phone, ещё ниже: address. */
-    .footer__inner {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas:
-            "list1 list3 list2"
-            "legal legal phone"
-            ".     .     address";
-        gap: 24px 20px;
-    }
+  .footer__inner {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "list1 list3 list2"
+      "legal legal phone"
+      ".     .     address";
+    gap: 24px 20px;
+  }
 
-    .modal__content {
-        padding: 30px 20px 22px;
-        margin: 14px;
-    }
+  .modal__content {
+    padding: 30px 20px 22px;
+    margin: 14px;
+  }
 
-    .modal__title {
-        font-size: 22px;
-    }
+  .modal__title {
+    font-size: 22px;
+  }
 }
 
-/* =========================
-   АДАПТИВ — 460px
-   ========================= */
+/*Адаптив 460px*/
+
 @media (max-width: 460px) {
-    :root {
-        --side-padding: 10px;
-    }
+  :root {
+    --side-padding: 10px;
+  }
 
-    .header {
-        padding: 6px var(--side-padding) 10px;
-        height: 120px;
-    }
+  .header {
+    padding: 6px var(--side-padding) 10px;
+    height: 120px;
+  }
 
-    .header__menu,
-    .header__login {
-        width: 38px;
-        height: 38px;
-    }
+  .header__menu,
+  .header__login {
+    width: 38px;
+    height: 38px;
+  }
 
-    .header__logo img {
-        width: 46px;
-    }
+  .header__logo img {
+    width: 46px;
+  }
 
-    .search {
-        max-width: 440px;
-        height: 40px;
-    }
+  .search {
+    max-width: 440px;
+    height: 40px;
+  }
 
-    .search__button {
-        width: 44px;
-        padding: 6px;
-    }
+  .search__button {
+    width: 44px;
+    padding: 6px;
+  }
 
-    .search__button img {
-        width: 18px;
-        height: 18px;
-    }
+  .search__button img {
+    width: 18px;
+    height: 18px;
+  }
 
-    .search__input {
-        font-size: 15px;
-        padding: 0 12px 0 0;
-    }
+  .search__input {
+    font-size: 15px;
+    padding: 0 12px 0 0;
+  }
 
-    .main {
-        padding: 20px var(--side-padding) 40px;
-    }
+  .main {
+    padding: 20px var(--side-padding) 40px;
+  }
 
-    .page-title {
-        font-size: 22px;
-    }
+  .page-title {
+    font-size: 22px;
+  }
 
-    .section-title {
-        font-size: 17px;
-    }
+  .section-title {
+    font-size: 17px;
+  }
 
-    .numbers {
-        grid-template-columns: 1fr 1fr;
-    }
+  .numbers {
+    grid-template-columns: 1fr 1fr;
+  }
 
-    .numbers__value {
-        font-size: 16px;
-    }
+  .numbers__value {
+    font-size: 16px;
+  }
 
-    .footer {
-        padding: 24px var(--side-padding) 20px;
-        min-height: 467px;
-    }
+  .footer {
+    padding: 24px var(--side-padding) 20px;
+    min-height: 467px;
+  }
 
-    /* Раскладка для 460px (упрощённая):
+  /* Раскладка для 460px (упрощённая):
        две колонки ссылок, ниже legal, ниже phone + address. */
-    .footer__inner {
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-            "list1 list2"
-            "list3 list2"
-            "legal legal"
-            "phone address";
-        gap: 20px 16px;
-    }
+  .footer__inner {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "list1 list2"
+      "list3 list2"
+      "legal legal"
+      "phone address";
+    gap: 20px 16px;
+  }
 
-    .footer__list li {
-        margin-bottom: 10px;
-    }
+  .footer__list li {
+    margin-bottom: 10px;
+  }
 
-    .footer__list a {
-        font-size: 14px;
-    }
+  .footer__list a {
+    font-size: 14px;
+  }
 
-    .footer__phone {
-        font-size: 16px;
-    }
+  .footer__phone {
+    font-size: 16px;
+  }
 
-    .footer__address,
-    .footer__agree,
-    .footer__copy {
-        font-size: 14px;
-    }
+  .footer__address,
+  .footer__agree,
+  .footer__copy {
+    font-size: 14px;
+  }
 
-    .form__input {
-        padding: 14px 16px;
-    }
+  .form__input {
+    padding: 14px 16px;
+  }
 }
