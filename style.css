@@ -504,7 +504,7 @@ a {
 
 /*Адаптив 640px*/
 
-@media (max-width: 800px) {
+@media (max-width: 640px) {
   .header {
     padding: 8px var(--side-padding) 12px;
     height: 140px;
@@ -607,7 +607,7 @@ a {
 
 /*Адаптив 460px*/
 
-@media (max-width: 600px) {
+@media (max-width: 460px) {
   :root {
     --side-padding: 10px;
   }
