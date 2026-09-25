@@ -61,7 +61,6 @@ if (!empty($errors)) {
     exit;
 }
 
-
 echo json_encode([
     'success' => true,
     'message' => 'Спасибо, заявка принята!'
